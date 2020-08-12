@@ -24,13 +24,13 @@ public class RoleBasedSecurity extends WebSecurityConfigurerAdapter {
 		return new BCryptPasswordEncoder();
 	}
 
-	@Bean
-	public AuthenticationProvider authProvider() {
-		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
-		provider.setUserDetailsService(userDetailsService);
-		provider.setPasswordEncoder(encoder());
-		return provider;
-	}
+// 	@Bean
+// 	public AuthenticationProvider authProvider() {
+// 		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+// 		provider.setUserDetailsService(userDetailsService);
+// 		provider.setPasswordEncoder(encoder());
+// 		return provider;
+// 	}
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
